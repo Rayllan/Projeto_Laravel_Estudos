@@ -41,7 +41,14 @@ class ProdutoController extends Controller
      */
     public function show(string $id)
     {
-        //
+       // Carrega os detalhes do produto do banco de dados
+       //$produto = Produto::find($id);
+
+       // Verifique os dados do produto antes de passá-lo para a view
+       //dd($produto); // Ou var_dump($produto);
+
+       // Passa o objeto $produto para a view "details"
+       //return view('details', ['produto' => $produto]);
     }
 
     /**
