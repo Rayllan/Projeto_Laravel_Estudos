@@ -5,7 +5,7 @@
     @endforeach
 @endif
 
-<form action="{{ route('users.store') }}" method='POST'>
+<form action="{{ route('login.create') }}" method='POST'>
     @csrf
     Nome: <br> <input type="text" name="firtName"> <br>
     Sobrenome: <br> <input type="text" name="lastName"> <br>

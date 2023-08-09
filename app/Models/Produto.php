@@ -8,7 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Produto extends Model
 {
     use HasFactory;
-    
+
+    protected $fillable = [
+        'nome',
+        'descricao',
+        'preco',
+        'imagem',
+        'slug',
+        'id_user',
+        'id_categoria',
+    ];
+
     // nome da tabela
     protected $table = 'produtos';
 
@@ -21,5 +31,4 @@ class Produto extends Model
     {
         return $this->belongsTo(Categoria::class, 'id_categoria');
     }
-
 }
