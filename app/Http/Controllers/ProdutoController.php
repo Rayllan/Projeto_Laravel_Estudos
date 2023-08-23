@@ -14,9 +14,7 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        //return 'index';
-
-        //$produtos = Produto::paginate(6);
+        
         $produtos = Produto::paginate(5);
         $categorias = Categoria::all();
         

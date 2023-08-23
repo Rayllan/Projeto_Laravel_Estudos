@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -33,8 +34,8 @@ class LoginController extends Controller
     public function logout(Request $request)
     {
         Auth::logout();
-        $request-> session()->invalidate();
-        $request-> session()->regenerate();
+        $request->session()->invalidate();
+        $request->session()->regenerate();
         return redirect(route('site.index'));
     }
 
@@ -42,4 +43,5 @@ class LoginController extends Controller
     {
         return view('login.create');
     }
+
 }
